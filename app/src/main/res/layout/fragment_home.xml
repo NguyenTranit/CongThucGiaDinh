@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestscroolview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/headerView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:background="@color/red" />
+
+            <TextView
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/backgroundbottom3"
+                android:drawableLeft="@drawable/ic_search_primary_light"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:gravity="left|center"
+                android:hint="Tìm kiếm công thức"
+                android:paddingLeft="15dp"
+                android:textColorHint="#CA7474" />
+
+            <LinearLayout
+                android:id="@+id/view2"
+                android:layout_width="330dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/editSearch"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_box"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/mau3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/recipes"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/backgroundbottom4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txtFamily"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcy_category"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/aclonica"
+                        android:text="Bữa cơm gia đình"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/view_all_family"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/aladin"
+                        android:gravity="end"
+                        android:text="View All"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ryc_family"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_below="@+id/txtFamily"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txtCate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/aclonica"
+                        android:text="Dang mục món ăn"
+                        android:textColor="@color/green"
+                        android:textSize="19sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/txtCate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/txtOffice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/aclonica"
+                        android:text="Cơm văn phòng"
+                        android:textColor="@color/green"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/view_all_office"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:fontFamily="@font/aladin"
+                        android:gravity="end"
+                        android:text="View All"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcy_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_below="@+id/txtCate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbarHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

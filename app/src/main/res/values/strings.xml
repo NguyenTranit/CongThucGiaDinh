@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">3 bữa 1 ngày</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipes">Hãy chế biến món ăn của bạn với những công thức nấu ăn đơn giản này.Giữ an toàn và sạch sẽ trong khi nấu ăn. Lưu các món ăn yêu thích của bạn và chia sẻ chúng với mọi người.</string>
+    <string name="app">Ứng dụng của chúng tôi là miễn phí cho bạn với bộ sưu tập lớn nhất các món ăn và công thức nấu ăn ngoại tuyến</string>
+</resources>

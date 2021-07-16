@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logo"
+        android:icon="@mipmap/menau5"
+        android:title="logo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/nav_rating"
+        android:icon="@drawable/ic_star"
+        android:title="Đánh giá ứng dụng"></item>
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share"
+        android:iconTintMode="@color/red"
+        android:title="Chia sẻ ứng dụng"></item>
+
+
+</menu>
