@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.note.AddNoteActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/timer"
+            android:text="20/11/2021"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_14sp"
+            android:layout_margin="@dimen/_10dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
+
+        <Button
+            android:id="@+id/hoantat"
+            android:text="Hoàn tất"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/_10dp"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginLeft="@dimen/_10dp">
+        <EditText
+            android:backgroundTint="@color/colorText"
+            android:id="@+id/edit_title"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:background="@drawable/textbox"
+            android:hint="Viết tiêu đề"
+            android:textColorHint="@color/black"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/red"
+            android:layout_below="@+id/hoantat"
+            android:textSize="@dimen/_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/ic_voice"
+            android:id="@+id/imgRecord_title"
+            android:layout_marginRight="@dimen/_10dp"
+            android:layout_gravity="right|center"
+            android:layout_width="wrap_content"
+            app:tint="@color/red"
+            android:layout_height="wrap_content"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginLeft="@dimen/_10dp">
+        <EditText
+            android:id="@+id/edit_body"
+            android:textStyle="normal"
+            android:gravity="left"
+            android:background="@drawable/box"
+            android:hint="Viết ghi chú ở đây"
+            android:textColorHint="@color/black"
+            android:textColor="@color/red"
+            android:padding="@dimen/_5dp"
+            android:textSize="@dimen/_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:src="@drawable/ic_voice"
+            android:id="@+id/imgRecord_note"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_10dp"
+            android:layout_gravity="right|top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/red" />
+    </FrameLayout>
+
+</LinearLayout>

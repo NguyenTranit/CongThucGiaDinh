@@ -4,28 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.favorite.FavouriteFragment">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></FrameLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground"
+        android:layout_below="@+id/framelayout"
+        android:background="@color/white"
         android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcy_favourite"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical">
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtFav1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="@dimen/_10dp"-->
+<!--                android:layout_marginTop="@dimen/_5dp"-->
+<!--                android:layout_marginBottom="@dimen/_5dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:fontFamily="@font/aclonica"-->
+<!--                android:text="Danh mục món ăn"-->
+<!--                android:textColor="@color/green"-->
+<!--                android:textSize="@dimen/_17sp" />-->
+
+            <ImageView
+                android:id="@+id/imgNone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_320dp"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:src="@drawable/mau6"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_favourite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_marginRight="@dimen/_5dp"
+
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtFav2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="@dimen/_10dp"-->
+<!--                android:layout_marginBottom="@dimen/_5dp"-->
+<!--                android:fontFamily="@font/aclonica"-->
+<!--                android:text="Danh mục thực đơn"-->
+<!--                android:textColor="@color/green"-->
+<!--                android:visibility="gone"-->
+<!--                android:textSize="@dimen/_17sp" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_favourite2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_marginRight="@dimen/_5dp"
+                android:layout_marginBottom="@dimen/_140dp" />
+        </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
 
     <ProgressBar
-        android:visibility="gone"
+
         android:id="@+id/progressbarHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/custom_progressbar"
+        android:visibility="gone" />
 
 </RelativeLayout>

@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#850505</color>
-    <color name="purple_500">#850505</color>
-    <color name="purple_700">#850505</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+<!--    <color name="purple_200">#850505</color>-->
+<!--    <color name="purple_500">#850505</color>-->
+<!--    <color name="purple_700">#850505</color>-->
+<!--    <color name="teal_200">#850505</color>-->
+<!--    <color name="teal_700">#ffffff</color>-->
+<!--    FF03DAC5-->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    //
     <color name="orange">#E18B0B</color>
     <color name="green">#759A49</color>
     <color name="red">#850505</color>
+    <color name="redlight">#A61212</color>
     <color name="colorBackground">#F4F7F7</color>
+    <color name="colorCategoryBackground">#BB81837F</color>
+    <color name="colorText">#BBE2E3E2</color>
+    <color name="colorText2">#BB1E1E1E</color>
+    <color name="greenfab">#B7C61D</color>
+    <color name="puplefab">#C855DC</color>
+    <color name="bluefab">#2D86AE</color>
+    <color name="pinkfab">#D11454</color>
+    <color name="yellowfab">#F1D904</color>
+
+
+
 </resources>

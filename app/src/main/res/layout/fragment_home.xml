@@ -3,193 +3,186 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     tools:context=".ui.home.HomeFragment">
-
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestscroolview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground"
+        android:background="@color/white"
         android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
-            android:id="@+id/headerView"
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
-                android:layout_height="245dp"
+                android:layout_height="@dimen/_160dp"
                 android:background="@color/red" />
 
             <TextView
                 android:id="@+id/editSearch"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_15dp"
                 android:background="@drawable/backgroundbottom3"
                 android:drawableLeft="@drawable/ic_search_primary_light"
-                android:drawablePadding="10dp"
-                android:elevation="5dp"
+                android:drawablePadding="@dimen/_10dp"
                 android:gravity="left|center"
                 android:hint="Tìm kiếm công thức"
-                android:paddingLeft="15dp"
-                android:textColorHint="#CA7474" />
+                android:paddingLeft="@dimen/_15dp"
+                android:textColorHint="#CA7474"
+                android:textSize="@dimen/_15sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180dp"
+                android:layout_below="@+id/editSearch"
+                android:layout_marginLeft="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_8dp"
+                android:foreground="@drawable/box"
+                app:cardCornerRadius="@dimen/_10dp">
+
+                <VideoView
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtGoiY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Gợi ý cho bạn"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_17sp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150dp"
+                android:layout_below="@+id/txtGoiY"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_25dp"
+                android:paddingEnd="@dimen/_25dp" />
 
             <LinearLayout
-                android:id="@+id/view2"
-                android:layout_width="330dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/editSearch"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rounded_box"
+                android:id="@+id/layoutTT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewpager"
+                android:layout_marginLeft="@dimen/_15dp"
                 android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/mau3" />
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <TextView
+                    android:id="@+id/txtfamily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewpager"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Danh mục thực đơn"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_17sp" />
+
+
+                <ImageView
+                    android:id="@+id/imgViewAll_TT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="@string/recipes"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_double_arrow" />
             </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ryc_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_85dp"
+                    android:layout_below="@+id/layoutTT"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_thucdon" />
+
+
+
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ryc_view"
+                android:layout_marginTop="@dimen/_5dp"
+                android:foregroundGravity="center"></FrameLayout>
 
             <LinearLayout
-                android:id="@+id/relative"
+                android:id="@+id/layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/view2"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/backgroundbottom4"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/framelayout"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:weightSum="2">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/txtCate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:layout_below="@+id/framelayout"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Danh mục món ăn"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_17sp" />
 
-                    <TextView
-                        android:id="@+id/txtFamily"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/rcy_category"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/aclonica"
-                        android:text="Bữa cơm gia đình"
-                        android:textColor="@color/green"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/view_all_family"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/aladin"
-                        android:gravity="end"
-                        android:text="View All"
-                        android:textColor="@color/orange"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/ryc_family"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:layout_below="@+id/txtFamily"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="10dp" />
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/imgViewAll"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
-
-                    <TextView
-                        android:id="@+id/txtCate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/aclonica"
-                        android:text="Dang mục món ăn"
-                        android:textColor="@color/green"
-                        android:textSize="19sp" />
-
-                </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcy_category"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_below="@+id/txtCate"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp" />
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
-
-                    <TextView
-                        android:id="@+id/txtOffice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/aclonica"
-                        android:text="Cơm văn phòng"
-                        android:textColor="@color/green"
-                        android:textSize="19sp" />
-
-                    <TextView
-                        android:id="@+id/view_all_office"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-
-                        android:fontFamily="@font/aladin"
-                        android:gravity="end"
-                        android:text="View All"
-                        android:textColor="@color/orange"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcy_office"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:layout_below="@+id/txtCate"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_double_arrow" />
             </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:nestedScrollingEnabled="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_140dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_category" />
+
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -198,5 +191,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/custom_progressbar"
         android:visibility="gone" />
 </RelativeLayout>

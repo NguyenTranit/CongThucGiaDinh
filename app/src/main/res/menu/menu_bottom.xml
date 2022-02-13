@@ -5,13 +5,19 @@
         android:icon="@drawable/ic_home"
         android:title="Trang chủ" />
 
+
     <item
         android:id="@+id/nav_favourite"
-        android:icon="@drawable/ic_baseline_favorite_24"
+        android:icon="@drawable/ic_fav"
         android:title="Yêu thích" />
 
     <item
+        android:id="@+id/nav_note"
+        android:icon="@drawable/notebook"
+        android:title="Ghi chú " />
+
+    <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_info"
         android:title="Thông tin " />
 </menu>

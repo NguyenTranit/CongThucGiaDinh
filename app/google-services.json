@@ -1,18 +1,27 @@
 {
   "project_info": {
     "project_number": "707721881681",
+    "firebase_url": "https://congthucgiadinh-default-rtdb.firebaseio.com",
     "project_id": "congthucgiadinh",
     "storage_bucket": "congthucgiadinh.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:707721881681:android:1f4f152ca58df29e9ab070",
+        "mobilesdk_app_id": "1:707721881681:android:f86b603a8b99b56b9ab070",
         "android_client_info": {
-          "package_name": "com.example.congthucgiadinh"
+          "package_name": "com.nhatnguyen.congthucgiadinh"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "707721881681-e1vmluenhpc9lour478vivo0aamle1m6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nhatnguyen.congthucgiadinh",
+            "certificate_hash": "3e762e6f1c35ad2aeb06ffe1a1d5f5db838f8673"
+          }
+        },
         {
           "client_id": "707721881681-vb47ft1lcn5cp8a5239h7tobo2him7pq.apps.googleusercontent.com",
           "client_type": 3

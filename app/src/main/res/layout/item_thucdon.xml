@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_135dp"
+    android:layout_height="@dimen/_80dp"
+    android:layout_marginLeft="@dimen/_8dp"
+    android:layout_marginRight="@dimen/_8dp"
+    app:cardBackgroundColor="@color/colorBackground"
+    android:elevation="@dimen/_50dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/_10dp">
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="@dimen/_120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Bữa phụ cho bé"
+        android:textColor="@color/red"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold" />
+</androidx.cardview.widget.CardView>
